@@ -1,0 +1,608 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Cooking_Ontology "http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#" >
+    <!ENTITY Aboca "http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Aboca&apos;" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Cooking_Ontology="http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Aboca="&Cooking_Ontology;Aboca&apos;">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="&Cooking_Ontology;hasIngredient">
+        <rdfs:domain rdf:resource="&Cooking_Ontology;Cuisine"/>
+        <rdfs:range rdf:resource="&Cooking_Ontology;Ingredients"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#servesRecipe -->
+
+    <owl:ObjectProperty rdf:about="&Cooking_Ontology;servesRecipe">
+        <rdfs:range rdf:resource="&Cooking_Ontology;Cuisine"/>
+        <rdfs:domain rdf:resource="&Cooking_Ontology;Restaurants"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Cuisine -->
+
+    <owl:Class rdf:about="&Cooking_Ontology;Cuisine"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Ingredients -->
+
+    <owl:Class rdf:about="&Cooking_Ontology;Ingredients"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Italian -->
+
+    <owl:Class rdf:about="&Cooking_Ontology;Italian">
+        <rdfs:subClassOf rdf:resource="&Cooking_Ontology;Cuisine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Italian_Restaurants -->
+
+    <owl:Class rdf:about="&Cooking_Ontology;Italian_Restaurants">
+        <rdfs:subClassOf rdf:resource="&Cooking_Ontology;Restaurants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Liquid_Ingredients -->
+
+    <owl:Class rdf:about="&Cooking_Ontology;Liquid_Ingredients">
+        <rdfs:subClassOf rdf:resource="&Cooking_Ontology;Ingredients"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Restaurants -->
+
+    <owl:Class rdf:about="&Cooking_Ontology;Restaurants"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Thai -->
+
+    <owl:Class rdf:about="&Cooking_Ontology;Thai">
+        <rdfs:subClassOf rdf:resource="&Cooking_Ontology;Cuisine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Thai_Restaurants -->
+
+    <owl:Class rdf:about="&Cooking_Ontology;Thai_Restaurants">
+        <rdfs:subClassOf rdf:resource="&Cooking_Ontology;Restaurants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#dry_ingredients -->
+
+    <owl:Class rdf:about="&Cooking_Ontology;dry_ingredients">
+        <rdfs:subClassOf rdf:resource="&Cooking_Ontology;Ingredients"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#vegetables -->
+
+    <owl:Class rdf:about="&Cooking_Ontology;vegetables">
+        <rdfs:subClassOf rdf:resource="&Cooking_Ontology;Ingredients"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Abocas -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Abocas">
+        <rdf:type rdf:resource="&Cooking_Ontology;Italian_Restaurants"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Asparagus_Bruschetta"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Baked_Mashroom_Macroni"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Garden_Fresh_Pizza"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Asparagus -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Asparagus">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Asparagus_Bruschetta -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Asparagus_Bruschetta">
+        <rdf:type rdf:resource="&Cooking_Ontology;Italian"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Asparagus"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Asparagus_Bruschetta"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Cheese"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;French_Bread"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Green_Onion"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Tomato"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Baked_Mashroom_Macroni -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Baked_Mashroom_Macroni">
+        <rdf:type rdf:resource="&Cooking_Ontology;Italian"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Bell_Pepper"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Cheese"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Macaroni"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Mashroom"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Yellow_Onion"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Bambu -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Bambu">
+        <rdf:type rdf:resource="&Cooking_Ontology;Thai_Restaurants"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Chow_Mein"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Curry_Fried_Rice"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Pad_Kee_Mao"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Pad_Thai"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Basil -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Basil">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Bean_Sprout -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Bean_Sprout">
+        <rdf:type rdf:resource="&Cooking_Ontology;dry_ingredients"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Beans -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Beans">
+        <rdf:type rdf:resource="&Cooking_Ontology;dry_ingredients"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Bell_Pepper -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Bell_Pepper">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Cappuccino -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Cappuccino">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Cheese -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Cheese">
+        <rdf:type rdf:resource="&Cooking_Ontology;dry_ingredients"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Cheese_Pizza -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Cheese_Pizza">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Cheese"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Tomato"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#ChowThai -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;ChowThai">
+        <rdf:type rdf:resource="&Cooking_Ontology;Thai_Restaurants"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Chow_Mein"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Curry_Fried_Rice"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Pad_Kee_Mao"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Pad_Thai"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Chow_Mein -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Chow_Mein">
+        <rdf:type rdf:resource="&Cooking_Ontology;Thai"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Green_Beans"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Green_Onion"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Noodles"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Soy_Sauce"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;carrot"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;peanut"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Cilantro -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Cilantro">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Curry_Fried_Rice -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Curry_Fried_Rice">
+        <rdf:type rdf:resource="&Cooking_Ontology;Thai"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Rice"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Soy_Sauce"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Yellow_Onion"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;carrot"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#French_Bread -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;French_Bread">
+        <rdf:type rdf:resource="&Cooking_Ontology;dry_ingredients"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Garden_Fresh_Pizza -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Garden_Fresh_Pizza">
+        <rdf:type rdf:resource="&Cooking_Ontology;Italian"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Bell_Pepper"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Cheese"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Green_Onion"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Mashroom"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Pineapple"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Tomato"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Garlic_Bread -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Garlic_Bread">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Green_Beans -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Green_Beans">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Green_Onion -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Green_Onion">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Lasagna -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Lasagna">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Macaroni -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Macaroni">
+        <rdf:type rdf:resource="&Cooking_Ontology;dry_ingredients"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Mashroom -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Mashroom">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Noodles -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Noodles">
+        <rdf:type rdf:resource="&Cooking_Ontology;dry_ingredients"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Olive_Garden -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Olive_Garden">
+        <rdf:type rdf:resource="&Cooking_Ontology;Italian_Restaurants"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Asparagus_Bruschetta"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Baked_Mashroom_Macroni"/>
+        <servesRecipe rdf:resource="&Cooking_Ontology;Garden_Fresh_Pizza"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Pad_Kee_Mao -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Pad_Kee_Mao">
+        <rdf:type rdf:resource="&Cooking_Ontology;Thai"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Bell_Pepper"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Noodles"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Soy_Sauce"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Yellow_Onion"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;garlic"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Pad_Thai -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Pad_Thai">
+        <rdf:type rdf:resource="&Cooking_Ontology;Thai"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Bean_Sprout"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Cilantro"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;Noodles"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;cabbage"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;garlic"/>
+        <hasIngredient rdf:resource="&Cooking_Ontology;peanut"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Pineapple -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Pineapple">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Potato -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Potato">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Red_Bell_Pepper -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Red_Bell_Pepper">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Rice -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Rice">
+        <rdf:type rdf:resource="&Cooking_Ontology;dry_ingredients"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Roman_Cucina -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Roman_Cucina">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Ruang_Thai -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Ruang_Thai">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#SaWaDiKa -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;SaWaDiKa">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Soy_Sauce -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Soy_Sauce">
+        <rdf:type rdf:resource="&Cooking_Ontology;Liquid_Ingredients"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Spring_Roll -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Spring_Roll">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Thai_Soon -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Thai_Soon">
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Tofu -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Tofu">
+        <rdf:type rdf:resource="&Cooking_Ontology;dry_ingredients"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Tomato -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Tomato">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#Yellow_Onion -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;Yellow_Onion">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#cabbage -->
+
+    <owl:NamedIndividual rdf:about="&Cooking_Ontology;cabbage">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#carrot -->
+
+    <owl:NamedIndividual rdf:about="&Cooking_Ontology;carrot">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#garlic -->
+
+    <owl:NamedIndividual rdf:about="&Cooking_Ontology;garlic">
+        <rdf:type rdf:resource="&Cooking_Ontology;vegetables"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2015/3/Cooking_Ontology.owl#peanut -->
+
+    <owl:Thing rdf:about="&Cooking_Ontology;peanut">
+        <rdf:type rdf:resource="&Cooking_Ontology;dry_ingredients"/>
+        <rdf:type rdf:resource="&owl;NamedIndividual"/>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
